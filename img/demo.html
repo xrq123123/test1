@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	.man{
+		display:inline-block;
+		background:url(man1.png) no-repeat center;
+		width:44px;
+		height:44px;
+	}
+	.woman{
+		display:inline-block;
+		background:url(woman1.png) no-repeat center;
+		width:44px;
+		height:44px;
+	}
+	.man.selected{
+		background:url(man2.png) no-repeat center;
+	}
+	.woman.selected{
+		background:url(woman2.png) no-repeat center;
+	}
+</style>
+</head>
+
+<body>
+	<span class="man"></span>
+	<span class="woman"></span>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+		$(".man,.woman").on("click",function(){
+			var $this = $(this);
+			$this.toggleClass("selected");
+		})
+	</script>
+</body>
+</html>
